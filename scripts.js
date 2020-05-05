@@ -30,6 +30,11 @@ function Slider(slider){
         current.classList.add('current');
         prev.classList.add('prev');
         next.classList.add('next');
+
+        current.querySelector('.slider-title').classList.add('animation-pop-in__title');
+        current.querySelector('.hero-title').classList.add('animation-pop-in__ctx');
+        current.querySelector('.hero-sub').classList.add('animation-pop-in__ctx');
+        current.querySelector('.hero-button').classList.add('animation-pop-in__btn');
     }
 
 
@@ -41,13 +46,25 @@ function Slider(slider){
         current.classList.remove(...classesToRemove);
         next.classList.remove(...classesToRemove);
 
+        current.querySelector('.slider-title').classList.remove('animation-pop-in__title');
+        current.querySelector('.hero-title').classList.remove('animation-pop-in__ctx');
+        current.querySelector('.hero-sub').classList.remove('animation-pop-in__ctx');
+        current.querySelector('.hero-button').classList.remove('animation-pop-in__btn');
+
         if(direction === 'back') {
             // make a new array of the values, and destructure them over and 
             // into the prev, current and next variables
             [prev, current, next] = [prev.previousElementSibling || slides.lastElementChild, prev, current];
+            
         } else {
             [prev, current, next] = [current, next, next.nextElementSibling || slides.firstElementChild];
         }
+        
+        current.querySelector('.slider-title').classList.add('animation-pop-in__title');
+        current.querySelector('.hero-title').classList.add('animation-pop-in__ctx');
+        current.querySelector('.hero-sub').classList.add('animation-pop-in__ctx');
+        current.querySelector('.hero-button').classList.add('animation-pop-in__btn');
+        
         applyClasses();
     }
 

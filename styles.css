@@ -309,17 +309,17 @@ body {
 
 /* Animations class */
 
-.current .animation-pop-in__title {
+.animation-pop-in__title {
     -webkit-animation: pop-in__title 0.5s ease-out forwards;
     animation: pop-in__title 0.5s ease-out forwards;
     opacity: 0;
 }
-.current .animation-pop-in__ctx {
+.animation-pop-in__ctx {
     -webkit-animation: pop-in__ctx 0.5s ease-out forwards;
     animation: pop-in__ctx 0.5s ease-out forwards;
     opacity: 0;
 }
-.current .animation-pop-in__btn {
+.animation-pop-in__btn {
     -webkit-animation: pop-in__btn 0.5s ease-out forwards;
     animation: pop-in__btn 0.5s ease-out forwards;
     opacity: 0;
